@@ -1,0 +1,27 @@
+// Import styles
+import 'antd/dist/antd.css'
+import '../styles/style.css'
+import '../styles/menu.css'
+
+import UserProvider from '../lib/auth/userContext'
+
+const App = ({ Component, pageProps }) => {
+  return (
+      <UserProvider>
+        <Component {...pageProps} />
+      </UserProvider>
+  )
+}
+
+export default App
+
+/**
+ * 
+
+ *    - Implementar next-seo y react-helmet (revisar ejemplos de la documentacion de next y la documentacion de cada dependencia)
+ *    - Inspeccionar el codigo html en la consola de desarrollador
+ *    - agradecer $$ a los autores de todos los icons utilizados 
+ *    - solucionar problema del menu cuando ya estas en la pagina que se cierre
+ *    - Cookies y terminos y condiciones
+ * 
+ */

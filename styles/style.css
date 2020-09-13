@@ -1,0 +1,57 @@
+.click:hover  {
+    cursor: pointer;
+}
+
+.icon {
+    width: 20px;
+    margin-right: 0.5rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+}
+
+/** Container Login Queries */
+@media (max-width: 500px) {
+    .container-login {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .image-login {
+        margin-top: 1rem;
+        width: 100%;
+    }
+}
+
+@media (min-width: 500px) {
+    .container-login {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .image-login {
+        width: 60%;
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .container-login {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .image-login {
+        width: 30%;
+        margin-top: 1rem;
+    }
+}
