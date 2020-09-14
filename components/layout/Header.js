@@ -38,7 +38,9 @@ const Header = ({ menuKey }) => {
 
         {/** Logo */}
         <div>
-          <img src="/logo.png" alt="Logo" style={{ height: "100px" }} />
+          <Link href="/">
+            <img src="/logo.png" alt="Logo" style={{ height: "100px" }} className="click" />
+          </Link>
         </div>
       </nav>
 
