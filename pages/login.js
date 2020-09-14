@@ -128,7 +128,7 @@ const Login = () => {
           </div>
 
           {/** "¿Olvidaste tu contraseña?" */}
-          <div style={{ textAlign: "left", marginTop: "2rem" }}>
+          <div style={{ textAlign: "left", margin: "2rem 0" }}>
             <Link href="/reset">
               <a>¿Olvidaste tu contraseña?</a>
             </Link>

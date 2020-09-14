@@ -96,7 +96,7 @@ const Reset = () => {
           </div>
 
           {/** "¿Ya tienes una cuenta? Inicia sesión aqui" */}
-          <div style={{ textAlign: "left", marginTop: "2rem" }}>
+          <div style={{ textAlign: "left", margin: "2rem 0" }}>
             <Link href="/login">
               <a>¿Ya tienes una cuenta? Inicia sesión aqui</a>
             </Link>

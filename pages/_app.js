@@ -24,4 +24,7 @@ export default App
  *    - solucionar problema del menu cuando ya estas en la pagina que se cierre
  *    - Cookies y terminos y condiciones
  * 
+ * Rapidas
+ *    - Agregar marginBottom al "olvidaste tu contraseña de los forms0"
+ * 
  */

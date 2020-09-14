@@ -1,9 +1,27 @@
+import { useState, useEffect } from 'react'
 import { Drawer, Menu, Button, Divider } from 'antd'
 import { useUser } from '../../lib/auth/userContext'
 import Link from 'next/link'
 
 const Sidebar = ({ visible, menuKey }) => {
   const { user } = useUser()
+  const [stateSidebar, setStateSidebar] = useState(null)
+
+  useEffect(() => {
+    const updateWidth = () => {
+      const width = document.body.clientWidth
+      if (width < 550) {
+        setStateSidebar("inline")
+      } else {
+        setStateSidebar("vertical")
+      }
+    }
+    updateWidth()
+    window.addEventListener("resize", updateWidth)
+    return () => {
+      window.removeEventListener("resize", updateWidth)
+    }
+  })
 
   return(
     <Drawer
@@ -32,7 +50,7 @@ const Sidebar = ({ visible, menuKey }) => {
         </div>
       )}
 
-      <Menu defaultSelectedKeys={[menuKey]} style={{ marginTop: "1rem" }}>
+      <Menu defaultSelectedKeys={[menuKey]} style={{ marginTop: "1rem" }} mode={stateSidebar}>
         <Menu.Item key="/" icon={<img src="/icons/global.svg" className="icon" />}>
           <Link href="/">
             Mercadito Qro
