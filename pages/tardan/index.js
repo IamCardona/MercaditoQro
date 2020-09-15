@@ -1,10 +1,23 @@
 import Layout from '../../components/layout/Layout'
-import { Affix, Row, Col } from 'antd'
+import { Affix, Row, Col, BackTop } from 'antd'
 import { HomeOutlined, ShopOutlined, DownOutlined } from '@ant-design/icons'
+import { useState } from 'react'
 
 const Tardan = () => {
+  const [menu, setMenu] = useState("none")
+  
   return(
     <Layout title="Mercadito Qro - Tardan" menuKey="/tardan">
+      <BackTop />
+
+        <Affix offsetTop={65}>
+          <nav style={{ width: "100%", height: "50px", display: "flex", justifyContent: "center" }} className="click">
+            <div style={{ backgroundColor: "black", width: "110px", height: "40px", opacity: "0.6", borderRadius: "0.5rem", display: "flex", justifyContent: "center", alignItems: "center" }}>
+              <img src="/icons/sombrero-blanco.svg" alt="menu" className="icon" />
+              <p style={{ color: "white", margin: "0" }}>CATÁLOGO</p>
+            </div>
+          </nav>
+        </Affix>
       <div>
 
         {/** Header - Tardan */}
@@ -20,12 +33,6 @@ const Tardan = () => {
           </div>
         </header>
 
-        <Affix offsetTop={60} onChange={e => console.log(e)}>
-          <nav style={{ width: "100%", backgroundColor: "#93213e", padding: "1rem", display: "flex", justifyContent: "center" }}>
-            <h3 style={{ color: "white", marginRight: "1rem" }} className="click">Inicio</h3>
-            <h3 style={{ color: "white", marginLeft: "1rem" }} className="click">Catálogo <DownOutlined /></h3>
-          </nav>
-        </Affix>
 
 
           <Row style={{

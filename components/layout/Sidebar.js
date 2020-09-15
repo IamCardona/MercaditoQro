@@ -63,7 +63,9 @@ const Sidebar = ({ visible, menuKey }) => {
           </Link>
         </Menu.Item>
 
-        <Divider orientation="left" plain style={{ color: "grey" }}>Tiendas</Divider>
+        <Menu.Item key="/divider">
+          <Divider orientation="left" plain style={{ color: "grey" }}>Tiendas</Divider>
+        </Menu.Item>
 
         <Menu.SubMenu key="/ropa" title="Ropa" icon={<img src="/icons/percha.svg" className="icon" />}>
 
