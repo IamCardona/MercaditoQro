@@ -1,7 +1,6 @@
 import Layout from '../../components/layout/Layout'
 import { Affix, Row, Col, BackTop, Drawer, Divider, Collapse } from 'antd'
 import { useState } from 'react'
-import { CaretRightOutlined } from '@ant-design/icons'
 
 const Tardan = () => {
   const [catalogo, setCatalogo] = useState(false)
@@ -10,7 +9,7 @@ const Tardan = () => {
     <Layout title="Mercadito Qro - Tardan" menuKey="/tardan">
       <BackTop />
 
-      <Affix offsetTop={65}>
+      <Affix offsetTop={65} className="menu-shop-none">
         <nav style={{ width: "100%", height: "50px", display: "flex", justifyContent: "center" }} className="click">
           <div style={{ backgroundColor: "black", width: "110px", height: "40px", opacity: "0.6", borderRadius: "0.5rem", display: "flex", justifyContent: "center", alignItems: "center" }} onClick={() => {
             setCatalogo(!catalogo)
@@ -27,14 +26,14 @@ const Tardan = () => {
         closable={true}
         onClose={() => setCatalogo(!catalogo)}
         visible={catalogo}
-        height={400}
+        height={600}
       >
         <div>
           <div>
             <p style={{ fontWeight: "bold" }}>INICIO</p>
             <p style={{ fontWeight: "bold" }}>CONTACTO</p>
             <Divider plain orientation="left">CATÁLOGO</Divider>
-            <Collapse ghost /* expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />} */>
+            <Collapse ghost>
               <Collapse.Panel header="SOMBREROS" key="1">
                 <div style={{ marginLeft: "2rem" }}>
                   <p style={{ fontWeight: "bold" }}>ETIQUETA</p>
@@ -56,23 +55,70 @@ const Tardan = () => {
       </Drawer>
 
       <div>
+        <Row>
+          <Col className="menu-shop-display" span={4}>
+            <div className="menu-shop-display">
+              <div>
 
-        {/** Header - Tardan */}
-        <header>
+                <div style={{ textAlign: "center", marginTop: "1rem" }}>
+                  <img src="/logos/logo-tardan.png" alt="Logo Tardan" style={{ width: "80%" }} />
+                </div>
 
-          {/** Header - logo tardan */}
-          <div style={{ textAlign: "center", margin: "2rem 0" }}>
-            <img src="/logos/logo-tardan.png" alt="Logo Tardan" />
-          </div>
+                <div style={{ marginTop: "2rem" }}>
+                  <div style={{ marginLeft: "1rem" }}>
+                    <p style={{ fontWeight: "bold" }}>INICIO</p>
+                    <p style={{ fontWeight: "bold" }}>CONTACTO</p>
+                  </div>
+                  <Divider plain orientation="left">CATÁLOGO</Divider>
+                  <Collapse ghost>
+                    <Collapse.Panel header="SOMBREROS" key="1">
+                      <div style={{ marginLeft: "2rem" }}>
+                        <p style={{ fontWeight: "bold" }}>ETIQUETA</p>
+                        <p style={{ fontWeight: "bold" }}>WESTERN</p>
+                        <p style={{ fontWeight: "bold" }}>PLAYA</p>
+                        <p style={{ fontWeight: "bold" }}>VESTIR</p>
+                      </div>
+                    </Collapse.Panel>
+                    <Collapse.Panel header="ACCESORIOS" key="2">
+                      <div style={{ marginLeft: "2rem" }}>
+                        <p style={{ fontWeight: "bold" }}>PLUMAS</p>
+                        <p style={{ fontWeight: "bold" }}>FUNDAS</p>
+                      </div>
+                    </Collapse.Panel>
+                  </Collapse>
+                </div>
+              </div>
+            </div>
+          </Col>
+          <Col xs={24} sm={24} md={20} xl={20}>
+            <div>
+              <header>
 
-          <div style={{ textAlign: "center", margin: "3rem 0" }}>
-            <h3 style={{ color: "#93213e" }}>"DE SONORA A YUCATÁN SE USAN SOMBREROS TARDAN, SOMBREROS QUE TRANSFORMAN"</h3>
-          </div>
-        </header>
+                {/** Header - logo tardan */}
+                <div style={{ textAlign: "center", margin: "2rem 0" }}>
+                  <img src="/logos/logo-tardan.png" alt="Logo Tardan" />
+                </div>
+
+                <div style={{ textAlign: "center", margin: "3rem 0" }}>
+                  <h3 style={{ color: "#93213e" }}>"DE SONORA A YUCATÁN SE USAN SOMBREROS TARDAN, SOMBREROS QUE TRANSFORMAN"</h3>
+                </div>
+              </header>
+            </div>
+          </Col>
+        </Row>
+      </div>
+    </Layout>
+  )
+}
+
+export default Tardan
+
+
+{/** Header - Tardan */}
 
 
 
-          <Row style={{
+          {/* <Row style={{
             backgroundColor: "#43464c"
           }}>
             <Col xs={24} sm={24} md={24} xl={12}>
@@ -118,10 +164,4 @@ const Tardan = () => {
                 <img src="/fotos/tardan/empresa-dedicada.jpg" alt="Tardan Empresa dedicada" style={{ width: "100%", borderRadius: "1rem" }} />
               </div>
             </Col>
-          </Row>
-      </div>
-    </Layout>
-  )
-}
-
-export default Tardan
+          </Row> */}
