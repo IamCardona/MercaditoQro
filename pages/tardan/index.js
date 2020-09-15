@@ -1,23 +1,60 @@
 import Layout from '../../components/layout/Layout'
-import { Affix, Row, Col, BackTop } from 'antd'
-import { HomeOutlined, ShopOutlined, DownOutlined } from '@ant-design/icons'
+import { Affix, Row, Col, BackTop, Drawer, Divider, Collapse } from 'antd'
 import { useState } from 'react'
+import { CaretRightOutlined } from '@ant-design/icons'
 
 const Tardan = () => {
-  const [menu, setMenu] = useState("none")
+  const [catalogo, setCatalogo] = useState(false)
   
   return(
     <Layout title="Mercadito Qro - Tardan" menuKey="/tardan">
       <BackTop />
 
-        <Affix offsetTop={65}>
-          <nav style={{ width: "100%", height: "50px", display: "flex", justifyContent: "center" }} className="click">
-            <div style={{ backgroundColor: "black", width: "110px", height: "40px", opacity: "0.6", borderRadius: "0.5rem", display: "flex", justifyContent: "center", alignItems: "center" }}>
-              <img src="/icons/sombrero-blanco.svg" alt="menu" className="icon" />
-              <p style={{ color: "white", margin: "0" }}>CATÁLOGO</p>
-            </div>
-          </nav>
-        </Affix>
+      <Affix offsetTop={65}>
+        <nav style={{ width: "100%", height: "50px", display: "flex", justifyContent: "center" }} className="click">
+          <div style={{ backgroundColor: "black", width: "110px", height: "40px", opacity: "0.6", borderRadius: "0.5rem", display: "flex", justifyContent: "center", alignItems: "center" }} onClick={() => {
+            setCatalogo(!catalogo)
+          }}>
+            <img src="/icons/sombrero-blanco.svg" alt="menu" className="icon" />
+            <p style={{ color: "white", margin: "0" }}>CATÁLOGO</p>
+          </div>
+        </nav>
+      </Affix>
+
+      <Drawer
+        title={<img src="/logos/logo-tardan.png" alt="Logo Tardan" style={{ height: "50px" }} />}
+        placement="top"
+        closable={true}
+        onClose={() => setCatalogo(!catalogo)}
+        visible={catalogo}
+        height={400}
+      >
+        <div>
+          <div>
+            <p style={{ fontWeight: "bold" }}>INICIO</p>
+            <p style={{ fontWeight: "bold" }}>CONTACTO</p>
+            <Divider plain orientation="left">CATÁLOGO</Divider>
+            <Collapse ghost /* expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />} */>
+              <Collapse.Panel header="SOMBREROS" key="1">
+                <div style={{ marginLeft: "2rem" }}>
+                  <p style={{ fontWeight: "bold" }}>ETIQUETA</p>
+                  <p style={{ fontWeight: "bold" }}>WESTERN</p>
+                  <p style={{ fontWeight: "bold" }}>PLAYA</p>
+                  <p style={{ fontWeight: "bold" }}>VESTIR</p>
+                </div>
+              </Collapse.Panel>
+              <Collapse.Panel header="ACCESORIOS" key="2">
+                <div style={{ marginLeft: "2rem" }}>
+                  <p style={{ fontWeight: "bold" }}>PLUMAS</p>
+                  <p style={{ fontWeight: "bold" }}>FUNDAS</p>
+                </div>
+              </Collapse.Panel>
+            </Collapse>
+
+          </div>
+        </div>
+      </Drawer>
+
       <div>
 
         {/** Header - Tardan */}
