@@ -32,7 +32,7 @@ const Sidebar = ({ visible, menuKey }) => {
       style={{ zIndex: "998" }}
       width={300}
     >
-      <div style={{ height: "60px" }}></div>
+      <div style={{ height: "10%" }}></div>
       {/** Menu */}
 
       {user ? (

@@ -2,6 +2,7 @@ import Layout from '../../components/layout/Layout'
 import { Menu } from 'antd'
 import { useState } from 'react'
 import TardanSidebar from '../../components/tardan/TardanSidebar'
+import TardanNavbar from '../../components/tardan/TardanNavbar'
 
 const Tardan = () => {
   const [test, setTest] = useState("/test")
@@ -9,12 +10,13 @@ const Tardan = () => {
   return(
     <Layout>
       <TardanSidebar />
+      <TardanNavbar />
 
       <div style={{ backgroundColor: "#fafaf8" }}>
-        <div style={{ marginLeft: "200px", height: "100vh" }} /* className="container-shops" */>
+        <div style={{ height: "100%" }} className="container-shops">
           <p>Content</p>
 
-          <Menu style={{ overflow: "auto", whiteSpace: "nowrap"  }}>
+          {/* <Menu style={{ overflow: "auto", whiteSpace: "nowrap"  }}>
             <Menu.Item style={{ display: "inline-block", borderRadius: "8px" }}>
               Vestir
             </Menu.Item>
@@ -88,7 +90,7 @@ const Tardan = () => {
               Vestir
             </Menu.Item>
             
-          </Menu>
+          </Menu> */}
         </div>
       </div>
     </Layout>
