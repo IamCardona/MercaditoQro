@@ -5,7 +5,6 @@ import { useState } from 'react'
 import Sidebar from './Sidebar'
 import Link from 'next/link'
 import { Badge } from 'antd'
-import { ShoppingOutlined } from '@ant-design/icons'
 
 const Header = ({ menuKey }) => {
   const [visibleSidebar, setVisibleSidebar] = useState(false)
@@ -15,15 +14,14 @@ const Header = ({ menuKey }) => {
       <nav style={{
         position: "fixed",
         width: "100%",
-        height: "60px",
+        height: "10vh",
         display: "flex",
         alignItems: "center",
-        boxShadow: "0 3px 3px 0 rgba(128,98,96,.16)",
         zIndex: "999",
         backgroundColor: "white",
-        justifyContent: "space-between" 
+        justifyContent: "space-between",
+        borderBottom: "solid 1px #e5edef"
       }}>
-        
 
         <div style={{ display: "flex", alignItems: "center" }}>
           {/** Menu */}
@@ -41,12 +39,12 @@ const Header = ({ menuKey }) => {
           </div>
 
           {/** Logo */}
+        </div>
           <div>
             <Link href="/">
               <img src="/logo.png" alt="Logo" style={{ height: "100px" }} className="click" />
             </Link>
           </div>
-        </div>
 
         <div>
           <div style={{ marginRight: "1.5rem" }}>

@@ -69,3 +69,39 @@
         display: block;
     }
 }
+
+.menu-selected {
+    border-radius: 8px;
+    padding: 6px 12px;
+    border: solid 2px #efece9;
+    font-weight: bold;
+}
+
+.menu-no-selected {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 6px 12px;
+    border: solid 2px #efece9;
+    color: #b8b4b4;
+    font-weight: bold;
+    margin: 1rem 0
+}
+
+.tardan {
+    background-color: #f1c1cd;
+    color: #93213e;
+}
+
+.sidebar-shops {
+    display: none;   
+}
+
+@media (min-width: 768px) {
+    .sidebar-shops {
+        display: block;
+    }
+
+    .container-shops {
+        margin-left: 200px;
+    }
+}

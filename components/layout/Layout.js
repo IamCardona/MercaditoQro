@@ -13,7 +13,7 @@ const Layout = ({ children, title = "Mercadito Qro", menuKey }) => {
       </Head>
       <Header menuKey={menuKey} />
       <div>
-        <main style={{ paddingTop: "60px", zIndex: "1"  }}>
+        <main style={{ paddingTop: "10vh", zIndex: "1"  }}>
           {children}
         </main>
       </div>

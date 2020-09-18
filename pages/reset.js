@@ -6,6 +6,7 @@ import { useUser } from '../lib/auth/userContext'
 import { ArrowLeftOutlined } from '@ant-design/icons'
 import firebase from '../lib/auth/firebase'
 import { useRouter } from 'next/router'
+import NavBack from '../components/user/NavBack'
 
 const Reset = () => {
   const { loadingUser, user } = useUser()
@@ -54,10 +55,12 @@ const Reset = () => {
       textAlign: "center"
     }}>
 
+      <NavBack />
+
       {/** Logo - Mercadito Qro */}
       <div>
         <Link href="/">
-          <img src="/logo.png" alt="Logo" className="image-login click" />
+          <img src="/logo.png" alt="Logo" className="image-login click" style={{ marginTop: "3rem" }} />
         </Link>
       </div> 
 

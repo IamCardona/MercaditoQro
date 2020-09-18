@@ -6,6 +6,7 @@ import { Form, Input, Button, Divider, Spin, message, Alert } from 'antd'
 import { UserOutlined, LockOutlined, ArrowLeftOutlined } from '@ant-design/icons'
 import firebase from '../lib/auth/firebase'
 import { useRouter } from 'next/router'
+import NavBack from '../components/user/NavBack'
 
 const Login = () => {
   const router  = useRouter()
@@ -66,10 +67,12 @@ const Login = () => {
 
       <Spin spinning={loading}>
 
+        <NavBack />
+
         {/** Logo - Mercadito Qro */}
         <div>
           <Link href="/">
-            <img src="/logo.png" alt="Logo" className="image-login click" />
+            <img src="/logo.png" alt="Logo" className="image-login click" style={{ marginTop: "3rem" }}/>
           </Link>
         </div>
 

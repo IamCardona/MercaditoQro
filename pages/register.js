@@ -5,7 +5,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { Form, Input, Button, Divider, Alert, Spin, message } from 'antd'
 import { UserOutlined, LockOutlined, MailOutlined, ArrowLeftOutlined } from '@ant-design/icons'
-
+import NavBack from '../components/user/NavBack'
 import firebase from '../lib/auth/firebase'
 
 const Register = () => {
@@ -79,10 +79,12 @@ const Register = () => {
       {/** Spining */}
       <Spin spinning={loading}>
 
+        <NavBack />
+
         {/** Logo - Mercadito Qro */}
         <div>
           <Link href="/">
-            <img src="/logo.png" alt="Logo" className="image-login click" />
+            <img src="/logo.png" alt="Logo" className="image-login click" style={{ marginTop: "3rem" }} />
           </Link>
         </div>
 
