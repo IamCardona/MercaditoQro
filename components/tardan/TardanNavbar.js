@@ -11,7 +11,8 @@ const TardanNavbar = ({ pathname }) => {
         position: "fixed",
         /* padding: "1rem", */
         overflow: "auto",
-        whiteSpace: "nowrap"
+        whiteSpace: "nowrap",
+        borderBottom: "solid 1px #e5edef"
       }} className="navbar_shops">
 
         {/** Tag container */}
