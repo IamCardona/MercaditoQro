@@ -8,14 +8,59 @@ const Tardan = () => {
   const [test, setTest] = useState("/test")
 
   return(
-    <Layout>
+    <Layout style={{ backgroundColor: "#fafaf8" }}>
       <TardanSidebar />
       <TardanNavbar />
 
       <div style={{ backgroundColor: "#fafaf8" }}>
         <div style={{ height: "100%" }} className="container-shops">
-          <p>Content</p>
 
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          <h1>Content</h1>
+          
           {/* <Menu style={{ overflow: "auto", whiteSpace: "nowrap"  }}>
             <Menu.Item style={{ display: "inline-block", borderRadius: "8px" }}>
               Vestir

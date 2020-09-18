@@ -37,7 +37,7 @@ const Sidebar = ({ visible, menuKey }) => {
 
       {user ? (
         <div>
-          <p>{`Hola, ${user}`}</p>
+          <p style={{ fontWeight: "bold" }}>{`Hola, ${user}`}</p>
         </div>
       ):(
         <div style={{ display: "flex" }}>

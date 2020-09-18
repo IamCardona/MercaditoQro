@@ -117,6 +117,30 @@
     display: none;   
 }
 
+
+.sidebar-shops::-webkit-scrollbar {
+    width: 8px;
+    background: white;
+}
+
+.sidebar-shops::-webkit-scrollbar-thumb {
+    background: #f2f2f2;
+    border-radius: 5px;
+    border-right: 5px solid white;
+}
+
+.navbar_shops::-webkit-scrollbar {
+    width: 3px;
+    background: white;
+    display: none;
+}
+
+.navbar_shops::-webkit-scrollbar-thumb {
+    background: #f2f2f2;
+    border-radius: 1px;
+    border-right: 1px solid white;
+}
+
 .navbar_shops {
     display: block;
 }
@@ -127,10 +151,16 @@
     }
 
     .container-shops {
-        margin-left: 200px;
+        margin-left: 220px;
     }
 
     .navbar_shops {
         display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .container-shops {
+        padding-top: 13vh;
     }
 }
