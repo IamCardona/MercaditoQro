@@ -9,15 +9,15 @@ const TardanNavbar = ({ pathname }) => {
         backgroundColor: "white",
         height: "auto",
         position: "fixed",
-        overflow: "auto",
+        overflow: "scroll",
         whiteSpace: "nowrap",
         width: "100%",
         padding: "0 1rem"
       }} className="navbar_shops">
 
-        <div style={{ position: "fixed", textAlign: "right", right: "0.5rem" }}>
+        {/* <div style={{ position: "fixed", textAlign: "right", right: "0.5rem" }}>
           <ArrowRightOutlined style={{ margin: "0", color: "#9254DE" }} />
-        </div>
+        </div> */}
 
         {/** Tag container */}
         <div style={{ textAlign: "center", paddingTop: "0.3rem" }}>
