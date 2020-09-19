@@ -42,7 +42,7 @@ const Header = ({ menuKey }) => {
         </div>
           <div>
             <Link href="/">
-              <img src="/logo.png" alt="Logo" style={{ height: "100px" }} className="click" />
+              <img src="/logo.png" alt="Logo" style={{ height: "45px" }} className="click" />
             </Link>
           </div>
 
