@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { ArrowRightOutlined } from '@ant-design/icons'
 
 const TardanNavbar = ({ pathname }) => {
   return(
@@ -14,8 +15,13 @@ const TardanNavbar = ({ pathname }) => {
         padding: "0 1rem"
       }} className="navbar_shops">
 
+        <div style={{ position: "fixed", textAlign: "right", right: "0.5rem" }}>
+          <ArrowRightOutlined style={{ margin: "0", color: "#9254DE" }} />
+        </div>
+
         {/** Tag container */}
-        <div style={{ textAlign: "center" }}>
+        <div style={{ textAlign: "center", paddingTop: "0.3rem" }}>
+
 
           <Link href="/tardan">
             <div className={!pathname ? "click menu-selected_nav" : "click menu-no-selected_nav"}>
