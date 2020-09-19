@@ -4,7 +4,7 @@ import Head from 'next/head'
 
 const Layout = ({ children, title = "Mercadito Qro", menuKey }) => {
   return(
-    <div>
+    <div style={{ backgroundColor: "#fafaf8" }}>
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" />
