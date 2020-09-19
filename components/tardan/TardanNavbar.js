@@ -16,11 +16,11 @@ const TardanNavbar = ({ pathname }) => {
       }} className="navbar_shops">
 
         {/* <div style={{ position: "fixed", textAlign: "right", right: "0.5rem" }}>
-          <ArrowRightOutlined style={{ margin: "0", color: "#9254DE" }} />
+          <p style={{ color: "grey" }}>Desliza para ver todo el catálogo</p>
         </div> */}
 
         {/** Tag container */}
-        <div style={{ textAlign: "center", paddingTop: "0.3rem" }}>
+        <div style={{ textAlign: "center"/* , paddingTop: "0.5rem" */ }}>
 
 
           <Link href="/tardan">
