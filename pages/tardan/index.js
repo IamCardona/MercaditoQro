@@ -1,5 +1,5 @@
 import Layout from '../../components/layout/Layout'
-import { Col, Row, Breadcrumb, Rate } from 'antd'
+import { Col, Row, Breadcrumb, Rate, Card, Button } from 'antd'
 import { useState } from 'react'
 import TardanSidebar from '../../components/tardan/TardanSidebar'
 import TardanNavbar from '../../components/tardan/TardanNavbar'
@@ -7,9 +7,6 @@ import Link from 'next/link'
 import firebase from '../../lib/auth/firebase'
 
 const Tardan = ({ data }) => {
-  console.log(data)
-  const [test, setTest] = useState("/test")
-
   return(
     <Layout>
       <TardanSidebar />
@@ -42,8 +39,36 @@ const Tardan = ({ data }) => {
                 <Rate disabled defaultValue={4.5} />
               </div>
             </Col>
-
           </Row>
+
+          <div style={{ width: "90%", margin: "2rem auto" }}>
+            <div>
+              <h3 style={{ margin: "0", letterSpacing: "-1px", fontWeight: "bold" }}>Etiqueta</h3>
+            </div>
+
+            <div style={{ margin: "1rem 0", display: "flex" }}>
+              <Card
+                hoverable
+                cover={<img alt="Boina" src="/boina.jpg" style={{ width: "90%", margin: "0 auto" }} />}
+                style={{ width: "240px" }}
+              >
+                <p style={{ letterSpacing: "-1px" }}>BILBAO LINO BEIGE RÚSTICO</p>
+                <p style={{ fontWeight: "bold", letterSpacing: "-1px" }}>$750.00</p>
+                <Button type="primary" style={{ margin: "0 auto", borderRadius: "0.5rem" }}>Agregar</Button>
+              </Card>
+
+              <Card
+                hoverable
+                cover={<img alt="Boina" src="/2.jpg" style={{ width: "90%", margin: "0 auto" }} />}
+                style={{ width: "240px", marginLeft: "1rem" }}
+              >
+                <p style={{ letterSpacing: "-1px" }}>BILBAO LINO BEIGE RÚSTICO</p>
+                <p style={{ fontWeight: "bold", letterSpacing: "-1px" }}>$750.00</p>
+                <Button type="primary" style={{ margin: "0 auto", borderRadius: "0.5rem" }}>Agregar</Button>
+              </Card>
+            </div>
+          </div>
+
         </div>
       </div>
     </Layout>
