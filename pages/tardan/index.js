@@ -23,7 +23,7 @@ const Tardan = ({ data }) => {
           </Breadcrumb>
 
           {/**  */}
-          <Row style={{ width: "90%", backgroundColor: "white", margin: "0 auto", borderRadius: "0.5rem" }}>
+          <Row style={{ width: "90%", backgroundColor: "white", margin: "0 auto", borderRadius: "0.5rem", zIndex: "990" }}>
             <Col xs={24} sm={24} md={24} xl={12}>
               <div style={{ padding: "1rem", textAlign: "center" }}>
                 <img src="/logos/logo-tardan.png" alt="Logo tardan" />

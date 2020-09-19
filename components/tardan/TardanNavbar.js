@@ -12,7 +12,8 @@ const TardanNavbar = ({ pathname }) => {
         overflow: "scroll",
         whiteSpace: "nowrap",
         width: "100%",
-        padding: "0 1rem"
+        padding: "0 1rem",
+        zIndex: "991"
       }} className="navbar_shops">
 
         {/* <div style={{ position: "fixed", textAlign: "right", right: "0.5rem" }}>
@@ -20,7 +21,7 @@ const TardanNavbar = ({ pathname }) => {
         </div> */}
 
         {/** Tag container */}
-        <div style={{ textAlign: "center"/* , paddingTop: "0.5rem" */ }}>
+        <div style={{ textAlign: "center"/* , paddingTop: "0.5rem" */, backgroundColor: "white" }}>
 
 
           <Link href="/tardan">

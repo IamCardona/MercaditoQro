@@ -7,7 +7,7 @@ const TardanSidebar  = ({ pathname }) => {
       <div style={{
         width: "200px",
         backgroundColor: "white",
-        height: "90vh",
+        height: "92vh",
         position: "fixed",
         padding: "1rem",
         overflow: "scroll",
