@@ -3,6 +3,9 @@ import 'antd/dist/antd.css'
 import '../styles/style.css'
 import '../styles/menu.css'
 
+/** Shops styles sheets */
+import '../styles/tardan.css'
+
 import UserProvider from '../lib/auth/userContext'
 
 const App = ({ Component, pageProps }) => {

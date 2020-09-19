@@ -7,20 +7,18 @@ const TardanSidebar  = ({ pathname }) => {
       <div style={{
         width: "200px",
         backgroundColor: "white",
-        height: "80vh",
+        height: "90vh",
         position: "fixed",
         padding: "1rem",
         overflow: "scroll",
-        top: "15vh",
-        left: "20px",
-        borderRadius: "1rem"
+        left: "20px"
       }} className="sidebar-shops">
 
         {/** Title */}
         <h2 style={{ fontWeight: "bold", color: "#332927" }}>Catálogo</h2>
 
         {/** Tag container */}
-        <div style={{ margin: "2rem 0", textAlign: "center", borderRadius: "1rem" }}>
+        <div style={{ margin: "0 0", textAlign: "left", borderRadius: "1rem" }}>
 
           <Link href="/tardan">
             <div className={!pathname ? "click menu-selected" : "click menu-no-selected"}>

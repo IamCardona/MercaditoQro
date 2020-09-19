@@ -15,7 +15,7 @@ const Tardan = () => {
       <div style={{ backgroundColor: "#fafaf8" }}>
         <div style={{ height: "100%" }} className="container-shops">
 
-          <h1>Content</h1>
+          <h1>Content 1</h1>
           <h1>Content</h1>
           <h1>Content</h1>
           <h1>Content</h1>

@@ -2,20 +2,16 @@ import Link from 'next/link'
 
 const TardanNavbar = ({ pathname }) => {
   return(
-    <div style={{ textAlign: "center", display: "flex", justifyContent: "center" }}>
+    <div style={{ textAlign: "center", display: "flex" }}>
       {/** Main container */}
       <div style={{
-        width: "95%",
         backgroundColor: "white",
         height: "auto",
         position: "fixed",
         overflow: "auto",
         whiteSpace: "nowrap",
-        /* borderBottom: "solid 1px #e5edef", */
-        top: "12vh",
-        margin: "auto 0",
-        padding: "0 1rem",
-        borderRadius: "1rem"
+        width: "100%",
+        padding: "0 1rem"
       }} className="navbar_shops">
 
         {/** Tag container */}
