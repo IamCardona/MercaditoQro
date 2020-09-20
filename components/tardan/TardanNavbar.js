@@ -13,7 +13,8 @@ const TardanNavbar = ({ pathname }) => {
         whiteSpace: "nowrap",
         width: "100%",
         padding: "0 1rem",
-        zIndex: "991"
+        zIndex: "991",
+        borderBottom: "solid 1px #e5edef"
       }} className="navbar_shops">
 
         {/* <div style={{ position: "fixed", textAlign: "right", right: "0.5rem" }}>
