@@ -3,7 +3,7 @@ import { Drawer, Menu, Button, Divider } from 'antd'
 import { useUser } from '../../lib/auth/userContext'
 import Link from 'next/link'
 
-const Sidebar = ({ visible, menuKey }) => {
+const Sidebar = ({ visible, menuKey, setVisible }) => {
   const { user } = useUser()
   const [stateSidebar, setStateSidebar] = useState(null)
 
@@ -25,17 +25,31 @@ const Sidebar = ({ visible, menuKey }) => {
 
   return(
     <Drawer
-      title={null}
-      closable={false}
+      title={user ? (
+        <div>
+          <p style={{ fontWeight: "bold", margin: "0" }}>{`Hola, ${user}`}</p>
+        </div>
+      ):(
+        <div style={{ display: "flex" }}>
+          <Link href="/login">
+            <Button type="primary" style={{ marginRight: "1rem" }}>Iniciar sesión</Button>
+          </Link>
+          <Link href="/register">
+            <Button>Crear cuenta</Button>
+          </Link>
+        </div>
+      )}
+      closable={true}
       visible={visible}
       placement="left"
-      style={{ zIndex: "998" }}
-      width={300}
+      style={{ zIndex: "999" }}
+      width={330}
+      onClose={() => setVisible(!visible)}
     >
-      <div style={{ height: "10vh" }}></div>
+     {/*  <div style={{ height: "10vh" }}></div> */}
       {/** Menu */}
 
-      {user ? (
+      {/* user ? (
         <div>
           <p style={{ fontWeight: "bold" }}>{`Hola, ${user}`}</p>
         </div>
@@ -48,9 +62,9 @@ const Sidebar = ({ visible, menuKey }) => {
             <Button>Crear cuenta</Button>
           </Link>
         </div>
-      )}
+      ) */}
 
-      <Menu defaultSelectedKeys={[menuKey]} style={{ marginTop: "1rem" }} mode={stateSidebar}>
+      <Menu defaultSelectedKeys={[menuKey]} style={{ /* marginTop: "1rem" */ }} mode={stateSidebar}>
         <Menu.Item key="/" icon={<img src="/icons/global.svg" className="icon" />}>
           <Link href="/">
             Mercadito Qro

@@ -17,7 +17,7 @@ const Header = ({ menuKey }) => {
         height: "10vh",
         display: "flex",
         alignItems: "center",
-        zIndex: "999",
+        zIndex: "998",
         backgroundColor: "white",
         justifyContent: "space-between",
         borderBottom: "solid 1px #e5edef"
