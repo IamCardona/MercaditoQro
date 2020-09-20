@@ -60,11 +60,15 @@ const Tardan = ({ data }) => {
               <Card
                 hoverable
                 cover={<img alt="Boina" src="/2.jpg" style={{ width: "90%", margin: "0 auto" }} />}
-                style={{ width: "240px", marginLeft: "1rem" }}
+                style={{ width: "240px", marginLeft: "1rem", display: "flex", flexWrap: "wrap", alignContent: "space-between" }}
               >
-                <p style={{ letterSpacing: "-1px" }}>BILBAO LINO BEIGE RÚSTICO</p>
-                <p style={{ fontWeight: "bold", letterSpacing: "-1px" }}>$750.00</p>
-                <Button type="primary" style={{ margin: "0 auto", borderRadius: "0.5rem" }}>Agregar</Button>
+                <div /* style={{ display: "flex", alignItems: "stretch", backgroundColor: "red" }} */>
+                  <div>
+                    <p style={{ letterSpacing: "-1px" }}>BILBAO LINO BEIGE RÚSTICO</p>
+                    <p style={{ fontWeight: "bold", letterSpacing: "-1px" }}>$750.00</p>
+                    <Button type="primary" style={{ margin: "0 auto", borderRadius: "0.5rem" }}>Agregar</Button>
+                  </div>
+                </div>
               </Card>
             </div>
           </div>
