@@ -8,7 +8,7 @@ import firebase from '../../lib/auth/firebase'
 
 const Tardan = ({ data }) => {
   return(
-    <Layout>
+    <Layout menuKey="/tardan" title="Mercadito Qro - Tardan">
       <TardanSidebar />
       <TardanNavbar />
 

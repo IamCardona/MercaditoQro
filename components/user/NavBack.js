@@ -16,7 +16,7 @@ const  NavBack = () => {
     }}>
       <div>
         <Link href="/">
-          <img src="/logo.png" alt="Logo" style={{ height: "100px" }} className="click" />
+          <img src="/logo.png" alt="Logo" style={{ height: "60px", marginLeft: "1rem" }} className="click" />
         </Link>
       </div>
 

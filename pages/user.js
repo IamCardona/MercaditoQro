@@ -26,7 +26,7 @@ const User = () => {
 
   if(!user) {
     return(
-      <Layout>
+      <Layout menuKey="/user">
         <h1>Nesesitas Iniciar sesión primero</h1>
         
         <Link href="/login">

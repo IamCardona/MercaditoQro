@@ -26,7 +26,7 @@ const Header = ({ menuKey }) => {
         <div style={{ display: "flex", alignItems: "center" }}>
           {/** Menu */}
           <div>
-            <div className="sidebar-menu-hamburger">
+            {/* <div className="sidebar-menu-hamburger">
               <div className="menu-activador menu-celular">
                 <input type="checkbox" id="lanzador" className="menu-celular" onClick={() => setVisibleSidebar(!visibleSidebar)} />
                 <label htmlFor="lanzador">
@@ -35,14 +35,15 @@ const Header = ({ menuKey }) => {
                   <span className="menu-activador-linea"></span>
                 </label>
               </div>
-            </div>
+            </div> */}
+            <img src="/icons/menu.svg" alt="Menu" className="click" onClick={() => setVisibleSidebar(!visibleSidebar)} style={{ marginLeft: "1rem", width: "25px" }} />
           </div>
 
           {/** Logo */}
         </div>
           <div>
             <Link href="/">
-              <img src="/logo.png" alt="Logo" style={{ height: "45px" }} className="click" />
+              <img src="/logo.png" alt="Logo" style={{ height: "70px" }} className="click" />
             </Link>
           </div>
 

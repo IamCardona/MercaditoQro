@@ -2,8 +2,10 @@ import { useState, useEffect } from 'react'
 import { Drawer, Menu, Button, Divider } from 'antd'
 import { useUser } from '../../lib/auth/userContext'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const Sidebar = ({ visible, menuKey, setVisible }) => {
+  const router = useRouter()
   const { user } = useUser()
   const [stateSidebar, setStateSidebar] = useState(null)
 
@@ -22,6 +24,12 @@ const Sidebar = ({ visible, menuKey, setVisible }) => {
       window.removeEventListener("resize", updateWidth)
     }
   })
+
+  const checkNavStatus = nav => {
+    if(router.pathname === nav) {
+      setVisible(!visible)
+    }
+  }
 
   return(
     <Drawer
@@ -43,7 +51,7 @@ const Sidebar = ({ visible, menuKey, setVisible }) => {
       visible={visible}
       placement="left"
       style={{ zIndex: "999" }}
-      width={330}
+      width={320}
       onClose={() => setVisible(!visible)}
     >
      {/*  <div style={{ height: "10vh" }}></div> */}
@@ -65,13 +73,13 @@ const Sidebar = ({ visible, menuKey, setVisible }) => {
       ) */}
 
       <Menu defaultSelectedKeys={[menuKey]} style={{ /* marginTop: "1rem" */ }} mode={stateSidebar}>
-        <Menu.Item key="/" icon={<img src="/icons/global.svg" className="icon" />}>
+        <Menu.Item key="/" icon={<img src="/icons/global.svg" className="icon" />} onClick={() => checkNavStatus("/")}>
           <Link href="/">
             Mercadito Qro
           </Link>
         </Menu.Item>
 
-        <Menu.Item key="/user" icon={<img src="/icons/usuario.svg" className="icon" />}>
+        <Menu.Item key="/user" icon={<img src="/icons/usuario.svg" className="icon" />} onClick={() => checkNavStatus("/user")}>
           <Link href="/user">
             Mi cuenta
           </Link>
@@ -83,7 +91,7 @@ const Sidebar = ({ visible, menuKey, setVisible }) => {
 
         <Menu.SubMenu key="/ropa" title="Ropa" icon={<img src="/icons/percha.svg" className="icon" />}>
 
-          <Menu.Item key="/tardan">
+          <Menu.Item key="/tardan" onClick={() => checkNavStatus("/tardan")}>
             <Link href="/tardan">
               <div className="flex"><img src="/icons/sombrero.svg" className="icon" /> Tardan</div>
             </Link>
