@@ -5,8 +5,13 @@ import TardanSidebar from '../../components/tardan/TardanSidebar'
 import TardanNavbar from '../../components/tardan/TardanNavbar'
 import Link from 'next/link'
 import firebase from '../../lib/auth/firebase'
+import TardanCard from '../../components/tardan/TardanCard'
 
-const Tardan = ({ data }) => {
+const Tardan = ({
+  Etiqueta,
+  Vestir,
+  Casual
+}) => {
   return(
     <Layout menuKey="/tardan" title="Mercadito Qro - Tardan">
       <TardanSidebar />
@@ -46,7 +51,11 @@ const Tardan = ({ data }) => {
               <h3 style={{ margin: "0", letterSpacing: "-1px", fontWeight: "bold" }}>Etiqueta</h3>
             </div>
 
-            <div style={{ margin: "1rem 0", display: "flex" }}>
+            <div style={{ margin: "1rem 0" }}>
+              <TardanCard hats={Etiqueta} />
+            </div>
+
+            {/* <div style={{ margin: "1rem 0", display: "flex" }}>
               <Card
                 hoverable
                 cover={<img alt="Boina" src="/boina.jpg" style={{ width: "90%", margin: "0 auto" }} />}
@@ -62,7 +71,7 @@ const Tardan = ({ data }) => {
                 cover={<img alt="Boina" src="/2.jpg" style={{ width: "90%", margin: "0 auto" }} />}
                 style={{ width: "240px", marginLeft: "1rem", display: "flex", flexWrap: "wrap", alignContent: "space-between" }}
               >
-                <div /* style={{ display: "flex", alignItems: "stretch", backgroundColor: "red" }} */>
+                <div>
                   <div>
                     <p style={{ letterSpacing: "-1px" }}>BILBAO LINO BEIGE RÚSTICO</p>
                     <p style={{ fontWeight: "bold", letterSpacing: "-1px" }}>$750.00</p>
@@ -70,7 +79,7 @@ const Tardan = ({ data }) => {
                   </div>
                 </div>
               </Card>
-            </div>
+            </div> */}
           </div>
 
         </div>
@@ -81,17 +90,41 @@ const Tardan = ({ data }) => {
 
 export default Tardan
 
-/* export async function getStaticProps() {
+export async function getStaticProps() {
   const snapshot = await firebase.firestore().collection('/shops/tardan/products').get()
 
   const data = []
 
   snapshot.forEach(doc => {
     const document = doc.data()
+    document.id = doc.id
     data.push(document)
+  })
+
+  const Etiqueta = [];
+  const Vestir = [];
+  const Casual = [];
+
+  data.forEach(hat => {
+    if(hat.category === "Etiqueta") {
+      Etiqueta.push(hat)
+    }
+
+    if(hat.category === "Vestir") {
+      Vestir.push(hat)
+    }
+
+    if(hat.category === "Casual") {
+      Casual.push(hat)
+    }
   })
     
   return {
-    props: { data }
+    props: {
+      Etiqueta,
+      Vestir,
+      Casual,
+      data
+    }
   } 
-} */
+}

@@ -23,24 +23,14 @@ const Header = ({ menuKey }) => {
         borderBottom: "solid 1px #e5edef"
       }}>
 
+        {/** Menu */}
         <div style={{ display: "flex", alignItems: "center" }}>
-          {/** Menu */}
           <div>
-            {/* <div className="sidebar-menu-hamburger">
-              <div className="menu-activador menu-celular">
-                <input type="checkbox" id="lanzador" className="menu-celular" onClick={() => setVisibleSidebar(!visibleSidebar)} />
-                <label htmlFor="lanzador">
-                  <span className="menu-activador-linea"></span>
-                  <span className="menu-activador-linea"></span>
-                  <span className="menu-activador-linea"></span>
-                </label>
-              </div>
-            </div> */}
             <img src="/icons/menu.svg" alt="Menu" className="click" onClick={() => setVisibleSidebar(!visibleSidebar)} style={{ marginLeft: "1rem", width: "25px" }} />
           </div>
+        </div>
 
           {/** Logo */}
-        </div>
           <div>
             <Link href="/">
               <img src="/logo.png" alt="Logo" style={{ height: "70px" }} className="click" />
