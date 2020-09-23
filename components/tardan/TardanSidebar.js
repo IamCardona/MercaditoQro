@@ -1,6 +1,4 @@
-import Link from 'next/link'
-
-const TardanSidebar  = ({ pathname }) => {
+const TardanSidebar  = ({ setHats, hats }) => {
   return(
     <div>
       {/** Main container */}
@@ -20,31 +18,23 @@ const TardanSidebar  = ({ pathname }) => {
         {/** Tag container */}
         <div style={{ margin: "0 0", textAlign: "left", borderRadius: "1rem" }}>
 
-          <Link href="/tardan">
-            <div className={!pathname ? "click menu-selected" : "click menu-no-selected"}>
-              Todo
-            </div>
-          </Link>
+          <div className={hats === "all" ? "click menu-selected" : "click menu-no-selected"} onClick={() => setHats("all")}>
+            Todo
+          </div>
 
-          <Link href="/tardan/[category]" as="/tardan/Etiqueta">
-            <div className={pathname === "Etiqueta" ? "click menu-selected" : "click menu-no-selected"}>
-              Etiqueta
-            </div>
-          </Link>
+          <div className={hats === "Etiqueta" ? "click menu-selected" : "click menu-no-selected"} onClick={() => setHats("Etiqueta")}>
+            Etiqueta
+          </div>
 
-          <Link href="/tardan/[category]" as="/tardan/Vestir">
-            <div className={pathname === "Vestir" ? "click menu-selected" : "click menu-no-selected"}>
-              Vestir
-            </div>
-          </Link>
+          <div className={hats === "Vestir" ? "click menu-selected" : "click menu-no-selected"} onClick={() => setHats("Vestir")}>
+            Vestir
+          </div>
 
-          <Link href="/tardan/[category]" as="/tardan/Casual">
-            <div className={pathname === "Casual" ? "click menu-selected" : "click menu-no-selected"}>
-              Casual
-            </div>
-          </Link>
+          <div className={hats === "Casual" ? "click menu-selected" : "click menu-no-selected"} onClick={() => setHats("Casual")}>
+            Casual
+          </div>
           
-          <Link href="/tardan/[category]" as="/tardan/Texano">
+          {/* <Link href="/tardan/[category]" as="/tardan/Texano">
             <div className={pathname === "Texano" ? "click menu-selected" : "click menu-no-selected"}>
               Texano
             </div>
@@ -78,7 +68,7 @@ const TardanSidebar  = ({ pathname }) => {
             <div className={pathname === "Accesorios" ? "click menu-selected" : "click menu-no-selected"}>
               Accesorios
             </div>
-          </Link>
+          </Link> */}
 
         </div>
       </div>

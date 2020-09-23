@@ -6,8 +6,8 @@ const TardanCard = ({ hats }) => {
       <Row gutter={[8, 8]}>
         {hats.map((hat, i) => {
           return(
-            <Col key={i} xs={12} sm={8} md={8} xl={6} >
-              <div >
+            <Col key={i} xs={12} sm={10} md={8} xl={6} style={{ margin: "0 auto" }}>
+              <div>
               <Card
                 hoverable
                 cover={<img alt={hat.name} src={hat.photos[0].photos[0].url} style={{ width: "90%", margin: "0 auto" }} />}

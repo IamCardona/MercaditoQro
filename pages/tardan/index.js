@@ -12,10 +12,12 @@ const Tardan = ({
   Vestir,
   Casual
 }) => {
+  const [hats, setHats] = useState("all")
+
   return(
     <Layout menuKey="/tardan" title="Mercadito Qro - Tardan">
-      <TardanSidebar />
-      <TardanNavbar />
+      <TardanSidebar setHats={setHats} hats={hats} />
+      <TardanNavbar setHats={setHats} hats={hats} />
 
       <div style={{ backgroundColor: "#fafaf8" }}>
         <div style={{ height: "100%" }} className="container-shops">
@@ -47,39 +49,31 @@ const Tardan = ({
           </Row>
 
           <div style={{ width: "90%", margin: "2rem auto" }}>
-            <div>
-              <h3 style={{ margin: "0", letterSpacing: "-1px", fontWeight: "bold" }}>Etiqueta</h3>
-            </div>
 
-            <div style={{ margin: "1rem 0" }}>
-              <TardanCard hats={Etiqueta} />
-            </div>
+            {/** Etiqueta Hats */}
+            {hats === "all" || hats === "Etiqueta" ? (
+              <div>
+                <h3 style={{ margin: "1rem 0", letterSpacing: "-1px", fontWeight: "bold" }}>Etiqueta</h3>
+                <TardanCard hats={Etiqueta} />
+              </div>
+            ) : null}
 
-            {/* <div style={{ margin: "1rem 0", display: "flex" }}>
-              <Card
-                hoverable
-                cover={<img alt="Boina" src="/boina.jpg" style={{ width: "90%", margin: "0 auto" }} />}
-                style={{ width: "240px" }}
-              >
-                <p style={{ letterSpacing: "-1px" }}>BILBAO LINO BEIGE RÚSTICO</p>
-                <p style={{ fontWeight: "bold", letterSpacing: "-1px" }}>$750.00</p>
-                <Button type="primary" style={{ margin: "0 auto", borderRadius: "0.5rem" }}>Agregar</Button>
-              </Card>
+            {/** Vestir Hats */}
+            {hats === "all" || hats === "Vestir" ? (
+              <div>
+                <h3 style={{ margin: "1rem 0", letterSpacing: "-1px", fontWeight: "bold" }}>Vestir</h3>
+                <TardanCard hats={Vestir} />
+              </div>
+            ) : null}
 
-              <Card
-                hoverable
-                cover={<img alt="Boina" src="/2.jpg" style={{ width: "90%", margin: "0 auto" }} />}
-                style={{ width: "240px", marginLeft: "1rem", display: "flex", flexWrap: "wrap", alignContent: "space-between" }}
-              >
-                <div>
-                  <div>
-                    <p style={{ letterSpacing: "-1px" }}>BILBAO LINO BEIGE RÚSTICO</p>
-                    <p style={{ fontWeight: "bold", letterSpacing: "-1px" }}>$750.00</p>
-                    <Button type="primary" style={{ margin: "0 auto", borderRadius: "0.5rem" }}>Agregar</Button>
-                  </div>
-                </div>
-              </Card>
-            </div> */}
+            {/** Vestir Hats */}
+            {hats === "all" || hats === "Casual" ? (
+              <div>
+                <h3 style={{ margin: "1rem 0", letterSpacing: "-1px", fontWeight: "bold" }}>Casual</h3>
+                <TardanCard hats={Casual} />
+              </div>
+            ) : null}
+
           </div>
 
         </div>
@@ -128,3 +122,29 @@ export async function getStaticProps() {
     }
   } 
 }
+
+/* <div style={{ margin: "1rem 0", display: "flex" }}>
+              <Card
+                hoverable
+                cover={<img alt="Boina" src="/boina.jpg" style={{ width: "90%", margin: "0 auto" }} />}
+                style={{ width: "240px" }}
+              >
+                <p style={{ letterSpacing: "-1px" }}>BILBAO LINO BEIGE RÚSTICO</p>
+                <p style={{ fontWeight: "bold", letterSpacing: "-1px" }}>$750.00</p>
+                <Button type="primary" style={{ margin: "0 auto", borderRadius: "0.5rem" }}>Agregar</Button>
+              </Card>
+
+              <Card
+                hoverable
+                cover={<img alt="Boina" src="/2.jpg" style={{ width: "90%", margin: "0 auto" }} />}
+                style={{ width: "240px", marginLeft: "1rem", display: "flex", flexWrap: "wrap", alignContent: "space-between" }}
+              >
+                <div>
+                  <div>
+                    <p style={{ letterSpacing: "-1px" }}>BILBAO LINO BEIGE RÚSTICO</p>
+                    <p style={{ fontWeight: "bold", letterSpacing: "-1px" }}>$750.00</p>
+                    <Button type="primary" style={{ margin: "0 auto", borderRadius: "0.5rem" }}>Agregar</Button>
+                  </div>
+                </div>
+              </Card>
+            </div> */
