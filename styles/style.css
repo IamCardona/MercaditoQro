@@ -75,8 +75,9 @@
     padding: 6px 12px;
     border: solid 2px #efece9;
     font-weight: bold;
-    background-color: #d5bef3;
-    color: #9254DE;
+    background-color: #9254DE;
+    color: white;
+    margin: 1rem 0;
 }
 
 .menu-no-selected {
@@ -86,7 +87,11 @@
     border: solid 2px #efece9;
     color: #b8b4b4;
     font-weight: bold;
-    margin: 1rem 0
+    margin: 1rem 0;
+}
+
+.menu-no-selected:hover {
+    color: #9254DE;
 }
 
 .menu-selected_nav {
@@ -94,8 +99,8 @@
     padding: 3px 6px;
     border: solid 2px #efece9;
     font-weight: bold;
-    background-color: #d5bef3;
-    color: #9254DE;
+    background-color: #9254DE;
+    color: white;
     display: inline-block;
     margin: 1rem 0;
     margin-right: 1rem;
