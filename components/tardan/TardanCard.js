@@ -13,16 +13,17 @@ const TardanCard = ({ hats, setModalVisible, setImageHats, setNameHat, setPriceH
                 cover={<img alt={hat.name} src={hat.photos[0].photos[0].url} style={{ width: "90%", margin: "0 auto" }} />}
                 style={{ display: "flex", flexWrap: "wrap", alignContent: "space-between" }}
               >
+                <p style={{ /* letterSpacing: "-1px", */ width: "100%", fontSize: "12px", color: "#767677", margin: "0", fontWeight: "lighter" }}>{hat.category}</p>
                 <p style={{ letterSpacing: "-1px", width: "100%" }}>{hat.name}</p>
-                <p style={{ fontWeight: "bold", letterSpacing: "-1px" }}>{`$${hat.price}.00`}</p>
-                <Button type="primary" style={{ borderRadius: "0.5rem" }} onClick={() => {
+                <p style={{ fontWeight: "bold", letterSpacing: "-1px", color: "#9254DE" }}>{`$${hat.price}.00`}</p>
+                {/* <Button type="primary" style={{ borderRadius: "0.5rem" }} onClick={() => {
                   setImageHats(hat.photos)
                   setNameHat(hat.name)
                   setPriceHat(hat.price)
                   setNicknameHat(hat.nickname)
                   setSizesHats(hat.size)
                   setModalVisible(true)
-                }}>Agregar</Button>
+                }}>Ver</Button> */}
               </Card>
               </div>
           </Col>

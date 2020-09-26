@@ -11,7 +11,7 @@ const TardanModal = ({ visible, setModalVisible, imageHats, nameHat, priceHat, n
       visible={visible}
       onCancel={() => setModalVisible(false)}
     >
-      <div>
+      <div style={{ marginTop: "1rem" }}>
 <CarouselProvider
         naturalSlideWidth={100}
         naturalSlideHeight={125}
