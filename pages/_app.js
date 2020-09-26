@@ -2,6 +2,7 @@
 import 'antd/dist/antd.css'
 import '../styles/style.css'
 import '../styles/menu.css'
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 /** Shops styles sheets */
 import '../styles/tardan.css'

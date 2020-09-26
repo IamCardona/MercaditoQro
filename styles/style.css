@@ -1,3 +1,4 @@
+
 .click:hover  {
     cursor: pointer;
 }
@@ -170,4 +171,9 @@
     .container-shops {
         padding-top: 13vh;
     }
+}
+
+.testCard:hover {
+    cursor: pointer;
+    transition: box-shadow 0.3s, border-color 0.3s;
 }

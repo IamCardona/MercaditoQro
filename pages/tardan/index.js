@@ -1,11 +1,12 @@
 import Layout from '../../components/layout/Layout'
-import { Col, Row, Breadcrumb, Rate, Card, Button } from 'antd'
+import { Col, Row, Breadcrumb, Rate } from 'antd'
 import { useState } from 'react'
 import TardanSidebar from '../../components/tardan/TardanSidebar'
 import TardanNavbar from '../../components/tardan/TardanNavbar'
 import Link from 'next/link'
 import firebase from '../../lib/auth/firebase'
 import TardanCard from '../../components/tardan/TardanCard'
+import TardanModal from '../../components/tardan/TardanModal'
 
 const Tardan = ({
   Etiqueta,
@@ -14,10 +15,20 @@ const Tardan = ({
 }) => {
   const [hats, setHats] = useState("all")
 
+  // Modal properties
+  const [modalVisible, setModalVisible] = useState(false)
+  const [imageHats, setImageHats] = useState(null)
+  const [nameHat, setNameHat] = useState(null)
+  const [priceHat, setPriceHat] = useState(null)
+  const [nicknameHat, setNicknameHat] = useState(null)
+  const [sizesHat, setSizesHats] = useState(null)
+  
   return(
     <Layout menuKey="/tardan" title="Mercadito Qro - Tardan">
       <TardanSidebar setHats={setHats} hats={hats} />
       <TardanNavbar setHats={setHats} hats={hats} />
+      <TardanModal visible={modalVisible} setModalVisible={setModalVisible} 
+      imageHats={imageHats} nameHat={nameHat} priceHat={priceHat} nicknameHat={nicknameHat} sizesHat={sizesHat} />
 
       <div style={{ backgroundColor: "#fafaf8" }}>
         <div style={{ height: "100%" }} className="container-shops">
@@ -54,7 +65,8 @@ const Tardan = ({
             {hats === "all" || hats === "Etiqueta" ? (
               <div>
                 <h3 style={{ margin: "1rem 0", letterSpacing: "-1px", fontWeight: "bold" }}>Etiqueta</h3>
-                <TardanCard hats={Etiqueta} />
+                <TardanCard hats={Etiqueta} setModalVisible={setModalVisible} 
+                setImageHats={setImageHats} setNameHat={setNameHat} setPriceHat={setPriceHat} setNicknameHat={setNicknameHat} setSizesHats={setSizesHats} />
               </div>
             ) : null}
 
@@ -62,7 +74,8 @@ const Tardan = ({
             {hats === "all" || hats === "Vestir" ? (
               <div>
                 <h3 style={{ margin: "1rem 0", letterSpacing: "-1px", fontWeight: "bold" }}>Vestir</h3>
-                <TardanCard hats={Vestir} />
+                <TardanCard hats={Vestir} setModalVisible={setModalVisible} 
+                setImageHats={setImageHats} setNameHat={setNameHat} setPriceHat={setPriceHat} setNicknameHat={setNicknameHat} setSizesHats={setSizesHats} />
               </div>
             ) : null}
 
@@ -70,7 +83,8 @@ const Tardan = ({
             {hats === "all" || hats === "Casual" ? (
               <div>
                 <h3 style={{ margin: "1rem 0", letterSpacing: "-1px", fontWeight: "bold" }}>Casual</h3>
-                <TardanCard hats={Casual} />
+                <TardanCard hats={Casual} setModalVisible={setModalVisible} 
+                setImageHats={setImageHats} setNameHat={setNameHat} setPriceHat={setPriceHat} setNicknameHat={setNicknameHat} setSizesHats={setSizesHats} />
               </div>
             ) : null}
 
